@@ -1,4 +1,6 @@
 # FDSstudy
 
-branch 본인이름\n
+branch 본인이름
+
+
 directory Day*
