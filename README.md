@@ -1,2 +1,4 @@
 # FDSstudy
-FDS study for Beginners
+
+branch 본인이름
+directory Day*
