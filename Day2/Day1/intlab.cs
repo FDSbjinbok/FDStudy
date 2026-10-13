@@ -1,5 +1,5 @@
-﻿using System; // 네임스페이스 선언부
-
+﻿#if false
+using System; // 네임스페이스 선언부
 
 namespace Day1 //네임스페이스
 {
@@ -46,3 +46,5 @@ C#을 공부하고 있습니다.");
     }
 
 }
+
+#endif
