@@ -167,7 +167,7 @@ class Issue5Demo
  
     { 
  
-        int num = int.MinValue; // 2147483648 
+        int num = int.MinValue; // -2147483648 
  
         // 교재 138쪽의 절댓값 공식 적용 
  
