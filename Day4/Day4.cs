@@ -91,23 +91,23 @@ class Issue3Demo
  
       // (1) 교재 130쪽 코드: 왼쪽만 (byte) 캐스팅, 오른쪽은 캐스팅 없음 
  
-      Console.WriteLine($"교재 출력 : Convert.ToString((byte)~x, 2.PadLeft(8, '0')} → {~x, 3"); 
+      Console.WriteLine($"교재 출력 : {Convert.ToString((byte)~x, 2.PadLeft(8, '0')} → {~x, 3}"); 
  
       // 출력: 11110101 → -11 
  
       // (2) 왼쪽에서 (byte)를 제거했을 때: byte 변수임에도 32비트 int로 승격되어 32자리 출력 
  
-        Console.WriteLine($"캐스팅 제거: {Convert.ToString(~x, 2)} → {~x, 3}"); 
+      Console.WriteLine($"캐스팅 제거: {Convert.ToString(~x, 2)} → {~x, 3}"); 
  
-        // 출력: 11111111111111111111111111110101 → -11 
+      // 출력: 11111111111111111111111111110101 → -11 
  
-        // 3 오른쪽에도 동일하게 (byte)를 적용했을 때: C#의 byte는 부호 없는 정수(0~255)임! 
+      // (3) 오른쪽에도 동일하게 (byte)를 적용했을 때: C#의 byte는 부호 없는 정수(0~255)임! 
  
-        byte invertedByte = (byte)~x; 
+      byte invertedByte = (byte)~x; 
  
-        Console.WriteLine($"실제 byte값: {Convert.ToString(invertedByte, 2.PadLeft(8, '0')} → {invertedByte, 3}"); 
+      Console.WriteLine($"실제 byte값: {Convert.ToString(invertedByte, 2.PadLeft(8, '0')} → {invertedByte, 3}"); 
  
-        // 출력: 11110101 → 245 (음수 -11이 아님!) 
+      // 출력: 11110101 → 245 (음수 -11이 아님!) 
  
     } 
  
@@ -126,7 +126,7 @@ class Issue4Demo
  
     Console.WriteLine($"check: {check}, count: {count}"); 
  
-    // 출력: check: False, count: 0 (뒤의 ++count가 아예 실행되지 않음! 
+    // 출력: check: False, count: 0 (뒤의 ++count가 아예 실행되지 않음!)
  
     // 2. Null 체크 또는 0 나누기 방어 시 && 대신 &를 썼을 때의 런타임 크래시 
  
@@ -175,7 +175,7 @@ class Issue5Demo
  
         Console.WriteLine($"{num}의 절댓값(교재 공식): {abs}"); 
  
-        // [실제 출력] -2147483648의 절댓값(교재 공식): -2147483648 (절댓값이 음수로 출력됨! 
+        // [실제 출력] -2147483648의 절댓값(교재 공식): -2147483648 (절댓값이 음수로 출력됨!)
  
         // 안전한 표준 라이브러리 Math.Abs(num) 호출 시: 
  
