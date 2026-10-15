@@ -91,7 +91,7 @@ class Issue3Demo
  
       // (1) 교재 130쪽 코드: 왼쪽만 (byte) 캐스팅, 오른쪽은 캐스팅 없음 
  
-      Console.WriteLine($"교재 출력 : {Convert.ToString((byte)~x, 2.PadLeft(8, '0')} → {~x, 3}"); 
+      Console.WriteLine($"교재 출력 : {Convert.ToString((byte)~x, 2).PadLeft(8, '0')} → {~x, 3}"); 
  
       // 출력: 11110101 → -11 
  
@@ -105,7 +105,7 @@ class Issue3Demo
  
       byte invertedByte = (byte)~x; 
  
-      Console.WriteLine($"실제 byte값: {Convert.ToString(invertedByte, 2.PadLeft(8, '0')} → {invertedByte, 3}"); 
+      Console.WriteLine($"실제 byte값: {Convert.ToString(invertedByte, 2).PadLeft(8, '0')} → {invertedByte, 3}"); 
  
       // 출력: 11110101 → 245 (음수 -11이 아님!) 
  
